@@ -1,0 +1,274 @@
+/* ==========================================================
+   超声波距离监测系统 — 简约白色风 QSS 样式表
+   ========================================================== */
+
+/* 全局 */
+QMainWindow {
+    background-color: #F5F6FA;
+    color: #212121;
+    font-family: "Microsoft YaHei", "PingFang SC", "Segoe UI", sans-serif;
+    font-size: 13px;
+}
+
+/* GroupBox — 简约卡片 */
+QGroupBox {
+    background-color: #FFFFFF;
+    border: 1px solid #E4E6EF;
+    border-radius: 8px;
+    margin-top: 14px;
+    padding-top: 8px;
+    font-weight: 500;
+    color: #4A5568;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 14px;
+    padding: 0 6px;
+    color: #718096;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+/* 串口栏 */
+#serialBar {
+    background-color: #FFFFFF;
+    border: 1px solid #E4E6EF;
+    border-radius: 8px;
+}
+
+#serialBar QLabel {
+    color: #4A5568;
+    font-weight: 500;
+}
+
+#serialStatus {
+    color: #718096;
+    font-weight: normal;
+    font-size: 12px;
+    padding-left: 8px;
+}
+
+#serialBar QPushButton {
+    border: 1px solid #E4E6EF;
+    border-radius: 6px;
+    padding: 5px 14px;
+    background-color: #FFFFFF;
+    color: #4A5568;
+}
+
+#serialBar QPushButton:hover {
+    background-color: #F7FAFC;
+    border-color: #CBD5E0;
+}
+
+#serialBar QComboBox {
+    border: 1px solid #E4E6EF;
+    border-radius: 5px;
+    padding: 4px 8px;
+    background: #FFFFFF;
+}
+
+/* 左侧状态面板 */
+#statusPanel, #centerPanel, #recordPanel {
+    background-color: transparent;
+}
+
+/* 模式显示 */
+#modeLabel {
+    font-size: 15px;
+    font-weight: 600;
+    color: #2D3748;
+    padding: 2px;
+}
+
+#modeIcon {
+    font-size: 24px;
+    color: #4CAF50;
+}
+#modeIcon[mode="monitor"] { color: #4CAF50; }
+#modeIcon[mode="silent"]  { color: #FF9800; }
+#modeIcon[mode="record"]  { color: #2196F3; }
+
+/* 人体检测 */
+#humanLabel {
+    font-size: 14px;
+    padding: 6px;
+}
+#humanLabel[active="true"]  { color: #F44336; font-weight: bold; }
+#humanLabel[active="false"] { color: #9E9E9E; font-weight: normal; }
+
+/* LED 指示灯（大圆点） */
+#ledRed, #ledYellow, #ledGreen {
+    font-size: 26px;
+    padding: 0;
+}
+#ledRed   { color: #F44336; }
+#ledYellow{ color: #FFB300; }
+#ledGreen { color: #4CAF50; }
+
+#ledText {
+    color: #718096;
+    font-size: 12px;
+}
+
+/* 蜂鸣器 */
+#beepIcon {
+    font-size: 24px;
+}
+#beepLabel {
+    font-size: 13px;
+    color: #9E9E9E;
+}
+#beepLabel[active="true"]  { color: #F44336; font-weight: bold; }
+#beepLabel[active="false"] { color: #9E9E9E; font-weight: normal; }
+
+/* 仪表盘容器 */
+#gauge {
+    border: 1px solid #E4E6EF;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+}
+
+/* 模式按钮 */
+#btnMode {
+    border: 1px solid #E4E6EF;
+    border-radius: 6px;
+    padding: 8px 16px;
+    background-color: #FFFFFF;
+    color: #4A5568;
+    font-weight: 500;
+}
+
+#btnMode:hover {
+    background-color: #F7FAFC;
+    border-color: #CBD5E0;
+}
+
+#btnMode[active="true"] {
+    background-color: #2196F3;
+    border-color: #2196F3;
+    color: white;
+}
+
+/* 距离值标签 */
+#distanceValueLabel {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2D3748;
+    padding: 4px;
+}
+
+/* 人体开关按钮 */
+#humanToggle {
+    border: 1px solid #E4E6EF;
+    border-radius: 6px;
+    padding: 8px 14px;
+    background-color: #FFFFFF;
+    color: #4A5568;
+}
+
+#humanToggle:hover {
+    background-color: #F7FAFC;
+}
+
+#humanToggle:checked {
+    background-color: #FFF3E0;
+    border-color: #FFB74D;
+    color: #E65100;
+    font-weight: bold;
+}
+
+/* 滑块 */
+QSlider::groove:horizontal {
+    height: 6px;
+    background: #E2E8F0;
+    border-radius: 3px;
+}
+
+QSlider::handle:horizontal {
+    width: 18px;
+    height: 18px;
+    margin: -6px 0;
+    background: #2196F3;
+    border-radius: 9px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+
+QSlider::handle:horizontal:hover {
+    background: #1976D2;
+}
+
+/* SpinBox */
+QSpinBox {
+    border: 1px solid #E4E6EF;
+    border-radius: 5px;
+    padding: 4px 8px;
+    background: #FFFFFF;
+    min-height: 22px;
+}
+
+QSpinBox:focus {
+    border-color: #2196F3;
+}
+
+/* 记录面板标题 */
+#recordTitle {
+    font-size: 15px;
+    font-weight: 600;
+    color: #2D3748;
+    padding: 8px;
+}
+
+#recordHint {
+    color: #A0AEC0;
+    font-size: 11px;
+    padding: 6px;
+}
+
+/* 记录表格 */
+QTableWidget {
+    background-color: #FFFFFF;
+    border: 1px solid #E4E6EF;
+    border-radius: 6px;
+    gridline-color: #EDF2F7;
+    selection-background-color: #E3F2FD;
+    selection-color: #1565C0;
+}
+
+QHeaderView::section {
+    background-color: #F7FAFC;
+    color: #4A5568;
+    border: none;
+    border-bottom: 1px solid #E2E8F0;
+    padding: 8px;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+QTableWidget::item {
+    padding: 6px 10px;
+    color: #2D3748;
+}
+
+QTableWidget::item:alternate {
+    background-color: #FAFBFC;
+}
+
+/* 滚动条 */
+QScrollBar:vertical {
+    background: transparent;
+    width: 8px;
+    margin: 0;
+}
+QScrollBar::handle:vertical {
+    background: #CBD5E0;
+    border-radius: 4px;
+    min-height: 24px;
+}
+QScrollBar::handle:vertical:hover {
+    background: #A0AEC0;
+}
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0;
+}
