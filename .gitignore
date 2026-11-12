@@ -1,0 +1,29 @@
+# ===== 构建产物 =====
+dist/
+build/
+*.o
+*.obj
+*.exe
+moc_*.cpp
+qrc_*.cpp
+ui_*.h
+Makefile*
+.qmake.stash
+
+# ===== IDE / 工具 =====
+*.pro.user
+*.pro.user.*
+.vscode/
+.idea/
+.trae/
+
+# ===== 51 单片机固件（Keil C51 工程，按要求不入库）=====
+chao_shen_bo_/
+
+# ===== 测试运行输出 =====
+test_result.txt
+test_out.txt
+
+# ===== 系统杂项 =====
+Thumbs.db
+.DS_Store
